@@ -1,7 +1,7 @@
 const express = require('express');
 //const externalModule =require('../logger/logger.js');
-//const externalModule=require('../util/helper.js');
-const externalModule=require('../validator/formatter.js');
+const externalModule=require('../util/helper.js');
+//const externalModule=require('../validator/formatter.js');
 
 
 
@@ -15,14 +15,14 @@ router.get('/test-me', function (req, res) {
     //externalModule.log()
     //res.send('Hello, Here Problem 1 Solution.')
     //externalModule.a()
-    // res.send('Hello, Here Problem 2 Solution.')
-    // externalModule.pd()
-    // externalModule.pm()
-    // externalModule.pb()
-    res.send('Hello, Here Problem 3 Solution.')
-    externalModule.t()
-    externalModule.lc()
-    externalModule.uc()
+    res.send('Hello, Here Problem 2 Solution.')
+    externalModule.pd()
+    externalModule.pm()
+    externalModule.pb()
+    // res.send('Hello, Here Problem 3 Solution.')
+    // externalModule.t()
+    // externalModule.lc()
+    // externalModule.uc()
 
 
 

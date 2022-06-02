@@ -1,15 +1,17 @@
 const pd=function printdate(){
-    console.log('01/06/2022')
-
+    let currentDate = new Date()
+    console.log(currentDate) 
 }
 
 const pm=function printmonth(){
-    console.log('june')
-
+    let currentdate = new Date()
+    let currentMonth = currentdate.getMonth() + 1
+    console.log('The current month is '+currentMonth)
 }
 
 const pb=function printbatch(){
-    console.log('Radon, W3D1, the topic for today is Nodejs Module sytem')
+    let batchInformation = 'Radon, W3D4, the topic for today is Nodejs module system assignment discussion'
+  console.log(batchInformation)
 }
 
 
