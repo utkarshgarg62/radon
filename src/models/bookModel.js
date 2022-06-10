@@ -5,16 +5,15 @@ const bookSchema = new mongoose.Schema( {
     name:String,
 	author_id:{
         type:ObjectId,
-        required: [true, 'author is not present'],
-        ref: "newAuthor",
-        unique:false
+        ref:"newAuthor",
+        required: true,
     },
 	price:Number,
 	ratings:Number,
 	publisher:{
         type:ObjectId,
         ref:"newPublisher",
-        required: [true, 'publisher is not present']
+        required: true
     } 
 }, { timestamps: true });
 module.exports = mongoose.model('newBook3', bookSchema)
