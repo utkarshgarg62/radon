@@ -27,6 +27,12 @@ const createUser= async function (req, res) {
 
 
 
+
+
+
+
+
+
 // const basicCode= async function(req, res, next) {
 //     let tokenDataInHeaders= req.headers.token
 //     console.log(tokenDataInHeaders)

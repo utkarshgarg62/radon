@@ -8,7 +8,7 @@ const commonMW = require ("../middlewares/commonMiddlewares")
 
 router.post("/createUser",commonMW.validateHeader, UserController.createUser)
 router.post("/createProduct", ProductController.createProduct )
-router.post("/createOrder", OrderController.createOrder )
+router.post("/createOrder",commonMW.validateUserId,commonMW.validateProductId, OrderController.createOrder )
 
 
 

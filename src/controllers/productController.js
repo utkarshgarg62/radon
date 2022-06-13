@@ -9,6 +9,35 @@ const createProduct= async function (req, res) {
 
 module.exports.createProduct=createProduct
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const createAuthor= async function (req, res) {
 //     let data = req.body
 //     let authorId = data.dauthor_id

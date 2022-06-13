@@ -1,38 +1,52 @@
-
 const validateHeader= function ( req, res, next) {
-    let header=req.header['isFreeAppUser']
-    if(!header){
-        res.send({msg:"Header is not Present"})
+    //console.log(req.headers.isFreeAppUser)
+    let data=req.headers.isFreeAppUser || req.headers.isfreeappuser
+   console.log(data)
+    if(data===undefined){
+        res.send("The request is missing a mandatory header ")
     }
     else{
-        next();
+        next()
     }
 }
-module.exports.validateHeader= validateHeader
+module.exports.validateHeader=validateHeader
+// Header Validation
 
 
-const isFreeAppUser= function ( req, res, next) {
-    let str=req.header['isFreeAppUser']
-    console.log(str)
-    if(!str){
-       return res.send({msg: "isFreeAppUser is missing in header"})
+
+
+
+
+const validateUserId=function(req,res,next){
+    let demoStr="61951bfa4d9fe0d34da86344"
+    let user_id=req.body['userId']
+    //let product_id=req.body['productId']
+    if(user_id.length===demoStr.length){
+        next()
     }
     else{
-       next()
+        res.send("Invalid UserId")
     }
 }
-module.exports.isFreeAppUser=isFreeAppUser
+module.exports.validateUserId=validateUserId
+// UserId Validation
 
-// const mid3= function ( req, res, next) {
-//     console.log("Hi I am a middleware named Mid3")
-//     next()
-// }
 
-// const mid4= function ( req, res, next) {
-//     console.log("Hi I am a middleware named Mid4")
-//     next()
-// }
 
-// module.exports.mid2= mid2
-// module.exports.mid3= mid3
-// module.exports.mid4= mid4
+
+
+
+
+const validateProductId=function(req,res,next){
+    let demoStr="61951bfa4d9fe0d34da86344"
+    //let user_id=req.body['userId']
+    let product_id=req.body['productId']
+    if(product_id.length===demoStr.length){
+        next()
+    }
+    else{
+        res.send("Invalid ProductId")
+    }
+}
+module.exports.validateProductId=validateProductId
+// ProductId Validation

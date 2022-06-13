@@ -16,13 +16,13 @@ mongoose.connect("mongodb+srv://functionup-radon-cohort:radon123@cluster0.zbsotu
 
 
 
-app.use (
-    function (req, res, next) {
-        console.log ("inside GLOBAL MW");
-        next()
-        // res.send({msg:"done"})
-  }
-  );
+// app.use (
+//     function (req, res, next) {
+//         console.log ("inside GLOBAL MW");
+//         next()
+//         // res.send({msg:"done"})
+//   }
+//   );
 
 
 

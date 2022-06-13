@@ -5,10 +5,47 @@ const createOrder= async function (req, res) {
     let data= req.body
     let savedData= await OrderModel.create(data)
     res.send({msg: savedData})
+    // let allBooks = await OrderModel.findOneAndUpdate(
+    //             { isFreeAppUser: "true" }, //condition
+    //             { $set: { amount: 100 } }, //update in data
+    //             { new: true, upsert: true } ,// new: true - will give you back the updated document // Upsert: it finds and updates the document but if the doc is not found(i.e it does not exist) then it creates a new document i.e UPdate Or inSERT
+    //         )
+    //         res.send({msg: allBooks})
 }
 
 
 module.exports.createOrder=createOrder
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
