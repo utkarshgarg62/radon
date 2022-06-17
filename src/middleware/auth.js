@@ -13,7 +13,8 @@ const validationToken= async function(req,res,next){
   //userId for the logged-in user
   let userLoggedIn = decodedToken.userId
   //userId comparision to check if the logged-in user is requesting for their own data
-  if(userToBeModified != userLoggedIn) return res.send({status: false, msg: 'User logged is not allowed to modify the requested users data'})
+  if(userToBeModified != userLoggedIn) 
+  return res.send({status: false, msg: 'User logged is not allowed to modify the requested users data'})
     next()
 }
 module.exports.validationToken=validationToken
